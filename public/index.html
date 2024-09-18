@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <title>CRC Index</title>
+</head>
+<body> 
+    <h2>Welcome</h2>
+    <p id="visitor_count"></p>
+</body>
+<script>
+
+    (async function getVisitorCount() {
+    
+        const counter_element = document.getElementById('visitor_count');
+        try {
+            const response = await fetch("/count");
+            if (!response.ok) {
+                throw 'error';
+            }
+
+            const data = await response.json();
+            counter_element.innerHTML = data['count'];
+        } catch (error) {
+            counter_element.style.display = "none";
+        }
+    })();
+</script>
+</html>

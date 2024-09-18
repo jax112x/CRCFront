@@ -1,2 +1,1 @@
-# CRCFront
-AWS Cloud Resume Challenge Frontend
+Repo for all front end files

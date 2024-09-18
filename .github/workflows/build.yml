@@ -1,0 +1,31 @@
+name: Deploy Front End
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [ "master" ]
+
+permissions:
+  id-token: write
+  contents: read
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name : Checkout master
+        uses: actions/checkout@master
+            
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ secrets.REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+          role-session-name : ${{ secrets.AWS_SESSION_NAME }}
+
+      - name: Deploy to s3
+        run: aws s3 sync ./public s3://${{ secrets.BUCKET_NAME }} --delete
+
+      - name: Invalidate Cache 
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*'
+        

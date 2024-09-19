@@ -5,7 +5,7 @@
 
 ## Overview
 
-A webpage hosted on AWS that tracks and displays the number of visitors. This repository is the for the frontend files. You can find the repository for backend files [here](https://github.com/jax112x/CRCBack).
+A webpage hosted on AWS that tracks and displays the number of visitors. This repository is for the frontend files. You can find the repository for backend files [here](https://github.com/jax112x/CRCBack).
 
 ## Architecture
 

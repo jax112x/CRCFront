@@ -9,7 +9,7 @@ A webpage hosted on AWS that tracks and displays the number of visitors. This is
 
 ## Architecture
 
-![alt text](/architecture.jpg "Architecture")
+![alt text](/architecture.png "Architecture")
 
 ## Technology used
 HTML, CSS, JavaScript, Python, GitHub, GitHub Actions, Terraform, CloudFront, S3, API Gateway, Lambda, DynamoDB, IAM 

@@ -5,11 +5,11 @@
 
 ## Overview
 
-A webpage hosted on AWS that tracks and displays the number of visitors.
+A webpage hosted on AWS that tracks and displays the number of visitors. This is the repository for frontend files.
 
 ## Architecture
 
-![alt text](/public/images/architecture.jpg "Architecture")
+![alt text](/architecture.jpg "Architecture")
 
 ## Technology used
 HTML, CSS, JavaScript, Python, GitHub, GitHub Actions, Terraform, CloudFront, S3, API Gateway, Lambda, DynamoDB, IAM 

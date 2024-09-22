@@ -38,7 +38,6 @@ The backend infrastructure, including the CloudFront distribution, is deployed u
 * __Frontend__ - A GitHub repository with a workflow for the static content is set up. It updates the S3 bucket and invalidates the CloudFront distribution whenever there is a push to the master branch.
 * __Backend__ - A GitHub repository with a workflow is used to deploy the backend infrastructure and the Lambda function whenever there is a push to the master branch.
 * __Authentication__ - OIDC is utilized for GitHub Actions to authenticate with AWS.
-* __Secrets__ - Any information that is deemed to be sensitive is stored as a repository secret.
 
 ### IAM Roles and Permissions
 
